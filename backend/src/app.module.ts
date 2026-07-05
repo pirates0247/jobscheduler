@@ -21,6 +21,7 @@ import { WorkersModule } from './modules/workers/workers.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { EventsModule } from './modules/events/events.module';
 import { SchedulerModule } from './modules/scheduler/scheduler.module';
+import { SeedModule } from './modules/seed/seed.module';
 import { RolesGuard } from './common/guards/roles.guard';
 
 @Module({
@@ -52,6 +53,7 @@ import { RolesGuard } from './common/guards/roles.guard';
     DashboardModule,
     EventsModule,
     SchedulerModule,
+    SeedModule,
   ],
   providers: [
     { provide: APP_FILTER, useClass: GlobalExceptionFilter },
