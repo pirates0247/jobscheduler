@@ -30,7 +30,7 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
     }
 
     const token = localStorage.getItem('accessToken');
-    const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
+    const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'https://codity-api-qgu1.onrender.com';
 
     const socketInstance = io(`${API_URL}/events`, {
       query: {

@@ -77,6 +77,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
     } catch (error) {
       logoutState();
+      if (typeof window !== 'undefined') {
+        const publicPaths = ['/', '/login', '/register'];
+        if (!publicPaths.includes(window.location.pathname)) {
+          window.location.href = '/login';
+        }
+      }
     } finally {
       setLoading(false);
     }
