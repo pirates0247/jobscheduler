@@ -33,7 +33,7 @@ async function bootstrap(): Promise<void> {
   // CORS
   const allowedOrigins = corsOrigin
     ? corsOrigin.split(',').map((o) => o.trim())
-    : ['http://localhost:3000'];
+    : ['http://localhost:3000', 'https://frontend-psi-ivory-36.vercel.app'];
   app.enableCors({
     origin: allowedOrigins,
     credentials: true,
